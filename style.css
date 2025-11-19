@@ -1,0 +1,38 @@
+.flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: flex-end;
+}
+.small-gap {
+  gap: var(--space-8);
+}
+.custom-gap{
+  gap: var(--space-12);
+}
+
+
+.text-style{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 64px;
+    color: #0000;
+}
+
+body{
+    width:833px;
+    height: 1000px;
+}
