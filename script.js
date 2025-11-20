@@ -158,8 +158,7 @@ function playNextNote() {
     if (currentNoteIndex < noteSequence.length) {
         const currentNote = noteSequence[currentNoteIndex];
         createNote(currentNote.note);
-        
-        // Schedule next note based on current note's duration
+    
         const waitTime = beatDuration * currentNote.duration;
         nextNoteTimeout = setTimeout(() => {
             currentNoteIndex++;
@@ -168,11 +167,10 @@ function playNextNote() {
     } else {
 
         createStartLine();
-        // Loop back to start after a pause
         nextNoteTimeout = setTimeout(() => {
             currentNoteIndex = 0;
             playNextNote();
-        }, beatDuration * 4); // 4 beat pause before looping
+        }, beatDuration * 4);
     }
 }
 
